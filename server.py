@@ -8,7 +8,7 @@ from telegram.ext import MessageHandler, Filters
 from telegram.ext import CallbackQueryHandler
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup
 
-from .scenario_parser import parse_scenarios
+from utils.scenario_parser import parse_scenarios
 
 PORT = int(os.environ.get('PORT', 8443))
 APPLICATION_NAME = f'https://{os.environ.get("HEROKU_APP_NAME", "powerful-everglades-39634")}.herokuapp.com/'
