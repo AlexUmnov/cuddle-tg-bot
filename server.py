@@ -1,4 +1,3 @@
-from utils.access_token import get_access_token
 import logging
 import os
 
@@ -7,7 +6,7 @@ from telegram.ext import CommandHandler
 from telegram.ext import MessageHandler, Filters
 
 PORT = int(os.environ.get('PORT', 5000))
-APPLICATION_NAME = f'https://{os.environ.get("HEROKU_APP_NAME", "powerful-everglades-39634.")}.herokuapp.com/'
+APPLICATION_NAME = f'https://{os.environ.get("HEROKU_APP_NAME", "powerful-everglades-39634")}.herokuapp.com/'
 HEROKU_TOKEN = os.environ.get("HEROKU_TOKEN", None)
 TG_ACCESS_TOKEN = os.environ['ACCESS_TOKEN']
 
