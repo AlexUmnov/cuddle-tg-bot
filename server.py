@@ -7,7 +7,6 @@ from telegram.ext import MessageHandler, Filters
 
 PORT = int(os.environ.get('PORT', 5000))
 APPLICATION_NAME = f'https://{os.environ.get("HEROKU_APP_NAME", "powerful-everglades-39634")}.herokuapp.com/'
-HEROKU_TOKEN = os.environ.get("HEROKU_TOKEN", None)
 TG_ACCESS_TOKEN = os.environ['ACCESS_TOKEN']
 
 def start(update, context):
@@ -32,5 +31,5 @@ dispatcher.add_handler(echo_handler)
 
 updater.start_webhook(listen="0.0.0.0",
                           port=int(PORT),
-                          url_path=HEROKU_TOKEN)
-updater.bot.setWebhook(APPLICATION_NAME + HEROKU_TOKEN)
+                          url_path=TG_ACCESS_TOKEN)
+updater.bot.setWebhook(APPLICATION_NAME + TG_ACCESS_TOKEN)
