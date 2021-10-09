@@ -32,5 +32,5 @@ dispatcher.add_handler(echo_handler)
 updater.start_webhook(listen="0.0.0.0",
                           port=int(PORT),
                           url_path=TG_ACCESS_TOKEN,
-                          webhook_url=f"https:{APPLICATION_NAME}//.herokuapp.com/" + TG_ACCESS_TOKEN)
+                          webhook_url=f"https://{APPLICATION_NAME}.herokuapp.com/" + TG_ACCESS_TOKEN)
 updater.bot.setWebhook(APPLICATION_NAME + TG_ACCESS_TOKEN)
